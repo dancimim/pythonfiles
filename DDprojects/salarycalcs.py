@@ -108,7 +108,6 @@ def currsal():
             break
         except ValueError:
             print("Please only enter numbers...")
-        return
 
 # function to calculate real cost of commuting
 def currentsaldeductions():
@@ -366,49 +365,50 @@ def salcomp():
         print("Your total package is worth", '£', int(total_comp_diff), "more than your old total package")
 
 
-
 salcomp()
+
 
 # function to print salary information to a file:
 def printsalinfo():
-    with open("salinfo.txt", "w") as f:
-        print("Current Base Salary", '£', current_salary, file=f)
-        print("Current Daily Salary:", '£', format(current_daily_salary, ".2f"), file=f)
-        print("Current Hourly Salary:", '£', format(current_hourly_salary, ".2f"), file=f)
-        print("Current Annual Bonus:", '£', format(current_bonus, ".2f"), file=f)
-        print("Current Annual Employer Pension Contributions:", '£', format(current_pension, ".2f"), file=f)
-        print("Current Total Compensation Value:", '£', current_totalvalue, file=f)
-        print("Current Value of holiday days:", '£', current_holidayvalue, 'for', current_holidaydays, 'days', file=f)
-        if current_days_in_office > 0:
-            print("Total weekly current price of commute is:", '£', format(current_weekly_price_of_commute, ".2f"), file=f)
-            print("Total yearly current price of commute is:", '£', format(current_yearly_price_of_commute, ".2f"), file=f)
-            print("You could have earned", '£', format(current_weekly_value_of_commuting_hours, ".2f"),
+    if __name__ == "__main__":
+        with open("salinfo.txt", "w") as f:
+            print("Current Base Salary", '£', current_salary, file=f)
+            print("Current Daily Salary:", '£', format(current_daily_salary, ".2f"), file=f)
+            print("Current Hourly Salary:", '£', format(current_hourly_salary, ".2f"), file=f)
+            print("Current Annual Bonus:", '£', format(current_bonus, ".2f"), file=f)
+            print("Current Annual Employer Pension Contributions:", '£', format(current_pension, ".2f"), file=f)
+            print("Current Total Compensation Value:", '£', current_totalvalue, file=f)
+            print("Current Value of holiday days:", '£', current_holidayvalue, 'for', current_holidaydays, 'days', file=f)
+            if current_days_in_office > 0:
+                print("Total weekly current price of commute is:", '£', format(current_weekly_price_of_commute, ".2f"), file=f)
+                print("Total yearly current price of commute is:", '£', format(current_yearly_price_of_commute, ".2f"), file=f)
+                print("You could have earned", '£', format(current_weekly_value_of_commuting_hours, ".2f"),
               "extra per week instead of commuting", file=f)
-            print("You could have earned", '£', format(current_yearly_value_of_commuting_hours, ".2f"),
+                print("You could have earned", '£', format(current_yearly_value_of_commuting_hours, ".2f"),
               "extra per year instead of commuting", file=f)
-            print("Your total weekly current cost of commuting is:", '£', format(current_total_weekly_cost_of_commute, ".2f"), file=f)
-            print("Your total yearly current cost of commuting is:", '£', format(current_total_yearly_cost_of_commute, ".2f"), file=f)
+                print("Your total weekly current cost of commuting is:", '£', format(current_total_weekly_cost_of_commute, ".2f"), file=f)
+                print("Your total yearly current cost of commuting is:", '£', format(current_total_yearly_cost_of_commute, ".2f"), file=f)
 
-        print("New Base Salary", '£', new_salary, file=f)
-        print("New Daily Salary:", '£', format(new_daily_salary, ".2f"), file=f)
-        print("New Hourly Salary:", '£', format(new_hourly_salary, ".2f"), file=f)
-        print("New Annual Bonus:", '£', format(new_bonus, ".2f"), file=f)
-        print("New Annual Employer Pension Contributions:", '£', format(new_pension, ".2f"), file=f)
-        print("New Total Compensation Value:", '£', new_totalvalue, file=f)
-        print("New Value of holiday days:", '£', new_holidayvalue, 'for', new_holidaydays, 'days', file=f)
-        if new_days_in_office > 0:
-            print("Total new weekly price of commute is:", '£', format(new_weekly_price_of_commute, ".2f"), file=f)
-            print("Total new yearly price of commute is:", '£', format(new_yearly_price_of_commute, ".2f"), file=f)
-            print("You could have earned", '£', format(new_weekly_value_of_commuting_hours, ".2f"),
+            print("New Base Salary", '£', new_salary, file=f)
+            print("New Daily Salary:", '£', format(new_daily_salary, ".2f"), file=f)
+            print("New Hourly Salary:", '£', format(new_hourly_salary, ".2f"), file=f)
+            print("New Annual Bonus:", '£', format(new_bonus, ".2f"), file=f)
+            print("New Annual Employer Pension Contributions:", '£', format(new_pension, ".2f"), file=f)
+            print("New Total Compensation Value:", '£', new_totalvalue, file=f)
+            print("New Value of holiday days:", '£', new_holidayvalue, 'for', new_holidaydays, 'days', file=f)
+            if new_days_in_office > 0:
+                print("Total new weekly price of commute is:", '£', format(new_weekly_price_of_commute, ".2f"), file=f)
+                print("Total new yearly price of commute is:", '£', format(new_yearly_price_of_commute, ".2f"), file=f)
+                print("You could have earned", '£', format(new_weekly_value_of_commuting_hours, ".2f"),
               "extra per week instead of commuting", file=f)
-            print("You could have earned", '£', format(new_yearly_value_of_commuting_hours, ".2f"),
+                print("You could have earned", '£', format(new_yearly_value_of_commuting_hours, ".2f"),
               "extra per year instead of commuting", file=f)
-            print("Your new total weekly cost of commuting is:", '£', format(new_total_weekly_cost_of_commute, ".2f"), file=f)
-            print("Your new total yearly cost of commuting is:", '£', format(new_total_yearly_cost_of_commute, ".2f"), file=f)
+                print("Your new total weekly cost of commuting is:", '£', format(new_total_weekly_cost_of_commute, ".2f"), file=f)
+                print("Your new total yearly cost of commuting is:", '£', format(new_total_yearly_cost_of_commute, ".2f"), file=f)
 
-        print("You will earn", '£', format(daily_salary_diff, ".2f"), "extra per day", file=f)
-        print("You will earn", '£', format(hourly_salary_diff, ".2f"), "extra per hour", file=f)
-        print("This is a increase of", '%', format(hourly_percent_increase, ".2f"), file=f)
+            print("You will earn", '£', format(daily_salary_diff, ".2f"), "extra per day", file=f)
+            print("You will earn", '£', format(hourly_salary_diff, ".2f"), "extra per hour", file=f)
+            print("This is a increase of", '%', format(hourly_percent_increase, ".2f"), file=f)
 
 
 printsalinfo()
