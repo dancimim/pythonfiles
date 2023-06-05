@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Salary Calculator</title>
+</head>
+<body>
+    <h1>Salary Calculator</h1>
+    <form method="POST" action="/calculate">
+        <label for="current-salary">Enter current Salary:</label>
+        <input type="text" name="current-salary" id="current-salary" required>
+        <br>
+        <label for="weekly-hours">Enter Weekly Hours:</label>
+        <input type="text" name="weekly-hours" id="weekly-hours" required>
+        <br>
+        <label for="bonus-percentage">Enter Bonus Percentage:</label>
+        <input type="text" name="bonus-percentage" id="bonus-percentage" required>
+        <br>
+        <label for="pension-percentage">Enter Pension Percentage:</label>
+        <input type="text" name="pension-percentage" id="pension-percentage" required>
+        <br>
+        <label for="phi">Do you receive Private Healthcare?</label>
+        <select name="phi" id="phi" required>
+            <option value="n">No</option>
+            <option value="y">Yes</option>
+        </select>
+        <br>
+        <label for="incp">Do you receive Income Protection?</label>
+        <select name="incp" id="incp" required>
+            <option value="n">No</option>
+            <option value="y">Yes</option>
+        </select>
+        <br>
+        <label for="lifecvr">Do you receive Life Cover?</label>
+        <select name="lifecvr" id="lifecvr" required>
+            <option value="n">No</option>
+            <option value="y">Yes</option>
+        </select>
+        <br>
+        <label for="holiday-days">Enter Holiday Days:</label>
+        <input type="text" name="holiday-days" id="holiday-days" required>
+        <br>
+        <input type="submit" value="Calculate">
+    </form>
+</body>
+</html>

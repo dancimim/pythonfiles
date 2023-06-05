@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Salary Calculator - Result</title>
+</head>
+<body>
+    <h1>Salary Calculator - Result</h1>
+    <p>Current Base Salary: £{{ current_salary }}</p>
+    <p>Current Daily Salary: £{{ '%.2f' % current_daily_salary }}</p>
+    <p>Current Hourly Salary: £{{ '%.2f' % current_hourly_salary }}</p>
+    <p>Current Annual Bonus: £{{ '%.2f' % current_bonus }}</p>
+    <p>Current Annual Employer Pension Contributions: £{{ '%.2f' % current_pension }}</p>
+    <p>Current Total Compensation Value: £{{ current_totalvalue }}</p>
+    <p>Current Value of holiday days: £{{ current_holidayvalue }} for {{ current_holidaydays }} days</p>
+</body>
+</html>
